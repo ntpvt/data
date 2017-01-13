@@ -1,0 +1,337 @@
+#searchtools-loader{height: 1px}
+
+.searchtools-container {
+    position: relative;
+    overflow: hidden;
+    font: 12px/1.4 arial,sans-serif;
+    color: #fff;
+    background:#111 url(http://i.imgur.com/rKdr4sj.png);
+}
+.searchtools-container img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.searchtools-stage {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    background:#000 url(http://i.imgur.com/rKdr4sj.png);
+}
+.searchtools-bar {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    overflow: hidden;
+}
+.searchtools-fullscreen,
+.searchtools-play {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-right: 1px solid #333;
+    outline: 1px solid #000;
+    outline-width: 0 1px 0 0;
+}
+.searchtools-play {
+    background-image: url(http://i.imgur.com/hI6MtQx.png);
+    background-position: 50% 11px;
+}
+.searchtools-play.pause {
+    background-position: 50% -89px;
+}
+.searchtools-fullscreen {
+    left: 42px;
+    background-image: url(http://i.imgur.com/6ZkytSA.png);
+    background-position: 50% 11px;
+}
+.searchtools-container.fullscreen .searchtools-fullscreen {
+    background-position: 50% -89px;
+}
+.searchtools-play.playing { background-position: 10px -91px }
+.searchtools-fullscreen.open { background-position: 8px -93px }
+
+.searchtools-container.notouch .searchtools-thumblink:hover,
+.searchtools-container.touch .searchtools-thumblink:active,
+.searchtools-thumblink.open,
+.searchtools-container.notouch .searchtools-fullscreen:hover,
+.searchtools-container.touch .searchtools-fullscreen:active,
+.searchtools-container.notouch .searchtools-play:hover,
+.searchtools-container.touch .searchtools-play:active,
+.searchtools-container.notouch .searchtools-popout:hover,
+.searchtools-container.touch .searchtools-popout:active { background-color: #000 }
+
+.searchtools-thumbnails-container {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    left: 86px;
+    bottom: 0;
+    z-index: 2;
+    *top: 6px;
+    *right: 6px;
+}
+.searchtools-thumbnails-list {
+    position: absolute!important;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.searchtools-thumbnails {
+    text-align: right;
+    float: right;
+}
+.searchtools-carousel .searchtools-thumbnails {
+    float: none;
+}
+.searchtools-thumbnails .searchtools-image {
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    margin: 0 0 0 2px;
+    cursor: pointer;
+    border: 3px double #111;
+    *border: 1px solid #111;
+    opacity: .6;
+    filter: alpha(opacity=60);
+    background: transparent;
+}
+.searchtools-thumbnails .searchtools-image {
+    *display: inline;
+}
+
+.searchtools-container.notouch .searchtools-thumbnails .searchtools-image:hover,
+.searchtools-container.touch .searchtools-thumbnails .searchtools-image:active {
+    opacity: .9;
+    background: #444;
+    background: rgba(255, 255, 255, .3);
+    filter: alpha(opacity=90);
+}
+
+.searchtools-container .searchtools-thumbnails .searchtools-image.active,
+.searchtools-container.notouch .searchtools-thumbnails .searchtools-image.active:hover {
+    opacity: 1;
+    background: #ddd;
+    background: rgba(255, 255, 255, .7);
+    *border-color: #ccc;
+    filter: alpha(opacity=100);
+}
+
+body .searchtools-tooltip {
+    background: #fff;
+    background: rgba( 255, 255, 255, .8);
+}
+
+.searchtools-captionopen {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: url(bgie.png);
+    background: rgba(0,0,0,.7);
+    padding: 3px 8px;
+    font-size: 10px;
+    text-transform:uppercase;
+    letter-spacing: 0.5;
+    z-index: 2;
+    cursor:pointer;
+    color: #ccc;
+}
+
+.searchtools-captionopen:hover {
+    background: #000;
+    color: #fff;
+}
+
+.searchtools-captionclose {
+    background: none;
+    font-size: 18px;
+    position: absolute;
+    top: 0; right: 10px;
+    cursor: pointer;
+}
+
+.searchtools-captionclose:hover{
+    color:#ccc;
+}
+
+.searchtools-progress.nocanvas {
+    width: 32px;
+    height: 5px;
+    background: rgba(255,255,255,.2);
+    background: url( 20.png );
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    display: none;
+}
+
+.searchtools-progress.nocanvas .searchtools-progressbar {
+    height: 100%;
+    width: 0;
+    background: white;
+}
+
+.searchtools-info {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    background: url(bgie.png);
+    background: url(http://i.imgur.com/rKdr4sj.png) rgba(0,0,0,.6);
+    z-index:2;
+}
+
+.searchtools-info.toggler {
+    visibility: hidden;
+}
+
+.searchtools-info.toggler.open {
+    visibility: visible;
+}
+
+.searchtools-info-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 14px 10px;
+    padding-right: 100px;
+}
+.searchtools-info-description {
+    opacity: .7;
+    margin: -10px 14px 10px;
+    padding-right: 100px;
+}
+.searchtools-counter {
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    z-index: 2;
+    font-weight: bold;
+}
+.searchtools-loader {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -24px 0 0 -24px;
+    z-index: 2;
+    display: none;
+}
+
+.searchtools-loader.nocanvas {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -24px 0 0 -24px;
+    z-index: 2;
+    display: none;
+    background: #000 url(http://i.imgur.com/vIlIjYB.gif) no-repeat 50% 50%;
+    opacity: .6;
+    filter: alpha(opacity=60);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.searchtools-image-nav {
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    width: 100%;
+    height: 36px;
+    left: 0;
+}
+
+.searchtools-image-nav-left,
+.searchtools-image-nav-right {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 20px;
+    z-index: 2;
+    background: url(http://i.imgur.com/yIrDYtU.png) 50% 50% no-repeat;
+    opacity: 0;
+}
+.searchtools-image-nav-right {
+    left: auto;
+    right: 20px;
+    background-image: url(http://i.imgur.com/83suEIE.png);
+    z-index: 2;
+}
+.searchtools-container.notouch .searchtools-image-nav-left:hover,
+.searchtools-container.touch .searchtools-image-nav-left:active { opacity: .7!important }
+.searchtools-container.notouch .searchtools-image-nav-right:hover,
+.searchtools-container.touch .searchtools-image-nav-right:active { opacity: .7!important }
+
+.searchtools-thumb-nav-left,
+.searchtools-thumb-nav-right {
+    cursor: pointer;
+    display: none;
+    background: url(http://i.imgur.com/nH9MXtk.png) 50% 50%;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    *top: 1px;
+    *left: 1px;
+    height: 27px;
+    width: 23px;
+    z-index: 3;
+}
+.searchtools-thumb-nav-right {
+    border-right: none;
+    right: 3px;
+    *right: 1px;
+    left: auto;
+    background: url(http://i.imgur.com/tZXIruA.png) 50% 50%;
+}
+.searchtools-thumbnails-container .disabled {
+    opacity: .2;
+    filter: alpha(opacity=20);
+    cursor: default;
+}
+.notouch .searchtools-thumb-nav-left:hover,
+.notouch .searchtools-thumb-nav-right:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background-color: #222;
+    background-color: rgba(255, 255, 255, .07);
+}
+.touch .searchtools-thumb-nav-left:active,
+.touch .searchtools-thumb-nav-right:active {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    background-color: #111;
+}
+.notouch .searchtools-thumbnails-container .disabled:hover {
+    opacity: .2;
+    filter: alpha(opacity=20);
+    background-color: transparent;
+}
+
+.searchtools-carousel .searchtools-thumb-nav-left,
+.searchtools-carousel .searchtools-thumb-nav-right {
+    display: block;
+}
+.searchtools-carousel .searchtools-thumbnails-list {
+    right: 28px;
+    left: 28px;
+}
