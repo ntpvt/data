@@ -1,0 +1,296 @@
+<script>function create(c){if(confirm("Create robots.txt?")){var d=c.robolist;d.value="# robots.txt generated at http://www.searchtools.top/\n";if(c.google.value!=""){d.value+="User-agent: Googlebot\nDisallow:"+c.google.value+"\n"}if(c.gimage.value!=""){d.value+="User-agent: googlebot-image\nDisallow:"+c.gimage.value+"\n"}if(c.gmobile.value!=""){d.value+="User-agent: googlebot-mobile\nDisallow:"+c.gmobile.value+"\n"}if(c.msn.value!=""){d.value+="User-agent: MSNBot\nDisallow:"+c.msn.value+"\n"}if(c.yahoo.value!=""){d.value+="User-agent: Slurp\nDisallow:"+c.yahoo.value+"\n"}if(c.teoma.value!=""){d.value+="User-agent: Teoma\nDisallow:"+c.teoma.value+"\n"}if(c.cuil.value!=""){d.value+="User-agent: twiceler\nDisallow:"+c.cuil.value+"\n"}if(c.gigablast.value!=""){d.value+="User-agent: Gigabot\nDisallow:"+c.gigablast.value+"\n"}if(c.scrub.value!=""){d.value+="User-agent: Scrubby\nDisallow:"+c.scrub.value+"\n"}if(c.dmoz.value!=""){d.value+="User-agent: Robozilla\nDisallow:"+c.dmoz.value+"\n"}if(c.nutch.value!=""){d.value+="User-agent: Nutch\nDisallow:"+c.nutch.value+"\n"}if(c.alexa.value!=""){d.value+="User-agent: ia_archiver\nDisallow:"+c.alexa.value+"\n"}if(c.baidu.value!=""){d.value+="User-agent: baiduspider\nDisallow:"+c.baidu.value+"\n"}if(c.naver.value!=""){d.value+="User-agent: naverbot\nDisallow:"+c.naver.value+"\n";d.value+="User-agent: yeti\nDisallow:"+c.naver.value+"\n"}if(c.ymm.value!=""){d.value+="User-agent: yahoo-mmcrawler\nDisallow:"+c.ymm.value+"\n"}if(c.psbot.value!=""){d.value+="User-agent: psbot\nDisallow:"+c.psbot.value+"\n"}if(c.sing.value!=""){d.value+="User-agent: asterias\nDisallow:"+c.sing.value+"\n"}if(c.blogs.value!=""){d.value+="User-agent: yahoo-blogs/v3.9\nDisallow:"+c.blogs.value+"\n"}if(c.allow.value!=""){d.value+="User-agent: *\nDisallow:"+c.allow.value+"\n"}if(c.delay.value!=""){d.value+="Crawl-delay: "+c.delay.value+"\n"}if(c.T1.value!=""){d.value+="Disallow: "+c.T1.value+"\n"}if(c.T2.value!=""){d.value+="Disallow: "+c.T2.value+"\n"}if(c.T3.value!=""){d.value+="Disallow: "+c.T3.value+"\n"}if(c.T4.value!=""){d.value+="Disallow: "+c.T4.value+"\n"}if(c.T5.value!=""){d.value+="Disallow: "+c.T5.value+"\n"}if(c.sitemap.value!=""){d.value+="Sitemap: "+c.sitemap.value+"\n"}}};</script>
+<div align="center">
+<center>
+<table class="normal" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td>
+&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="generator"></a></p>
+<hr>
+<form>
+<div align="left">
+<table class="normal" id="table1" border="0" cellpadding="2" width="100%">
+<tbody><tr>
+<td valign="top" width="37%"><b>Default -&nbsp; All Robots are:</b></td>
+<td width="17%">
+<select id="allow" name="allow" size="1">
+<option selected="" value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select></td>
+<td valign="top" width="43%">
+&nbsp;</td>
+</tr><tr>
+<td valign="top" width="37%"><b>Crawl-Delay:</b></td>
+<td colspan="2">
+<select id="delay" name="delay" size="1">
+<option selected="" value="">Default - No Delay</option>
+<option value="5">5 Seconds</option>
+<option value="10">10 Seconds</option>
+<option value="20">20 Seconds</option>
+<option value="60">60 seconds</option>
+<option value="120">120 Seconds</option>
+</select></td>
+</tr>
+<tr>
+<td valign="top" width="37%"><strong>Sitemap: </strong><em>(leave
+blank for none)</em></td>
+<td colspan="2">
+<input name="sitemap" size="45" value="http://www.yourdomain.com/feeds/posts/default?orderby=updated" type="text"></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+&nbsp;</td>
+<td valign="top" width="43%">
+&nbsp;</td>
+</tr><tr>
+<td valign="top" width="37%"><b>Specific Search Robots:</b></td>
+<td width="17%">
+Google</td>
+<td valign="top" width="43%">
+<select id="google" name="google" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>googlebot</i></td>
+</tr><tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+MSN Search</td>
+<td valign="top" width="43%">
+<select id="msn" name="msn" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>msnbot</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+Yahoo</td>
+<td valign="top" width="43%">
+<select id="yahoo" name="yahoo" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>yahoo-slurp</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+Ask/Teoma</td>
+<td valign="top" width="43%">
+<select id="teoma" name="teoma" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>teoma</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+Cuil</td>
+<td valign="top" width="43%">
+<select id="cuil" name="cuil" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <em>twiceler</em></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+GigaBlast</td>
+<td valign="top" width="43%">
+<select id="gigablast" name="gigablast" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>gigabot</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+Scrub The Web</td>
+<td valign="top" width="43%">
+<select id="scrub" name="scrub" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>scrubby</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+DMOZ Checker</td>
+<td valign="top" width="43%">
+<select id="dmoz" name="dmoz" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>robozilla</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+Nutch</td>
+<td valign="top" width="43%">
+<select id="nutch" name="nutch" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>nutch</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td>
+Alexa/Wayback</td>
+<td>
+<select id="alexa" name="alexa" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>ia_archiver</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td>
+Baidu</td>
+<td>
+<select id="baidu" name="baidu" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>baiduspider</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td>
+Naver</td>
+<td>
+<select id="naver" name="naver" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <em>naverbot, yeti</em></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td colspan="2">
+&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="37%"><b>Specific Special Bots:</b></td>
+<td width="17%">
+Google Image</td>
+<td valign="top" width="43%">
+<select id="gimage" name="gimage" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>googlebot-image</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+Google Mobile</td>
+<td valign="top" width="43%">
+<select id="gmobile" name="gmobile" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>googlebot-mobile</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+Yahoo MM</td>
+<td valign="top" width="43%">
+<select id="ymm" name="ymm" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>yahoo-mmcrawler</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+MSN PicSearch</td>
+<td valign="top" width="43%">
+<select id="psbot" name="psbot" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>psbot</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td width="17%">
+SingingFish</td>
+<td width="43%">
+<select id="sing" name="sing" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>asterias</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td>
+Yahoo Blogs</td>
+<td>
+<select id="blogs" name="blogs" size="1">
+<option selected="" value="">Same as Default</option>
+<option value=" ">Allowed</option>
+<option value=" /">Refused</option>
+</select>&nbsp; <i>yahoo-blogs/v3.9</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td colspan="2">
+&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="37%"><b>Restricted Directories:</b></td>
+<td colspan="2">
+<i>The path is relative to root and must contain a trailing "/"</i></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td colspan="2">
+<input name="T1" size="45" value="/cgi-bin/" type="text"></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td colspan="2">
+<input name="T2" size="45" type="text"></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td colspan="2">
+<input name="T3" size="45" type="text"></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td colspan="2">
+<input name="T4" size="45" type="text"></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td colspan="2">
+<input name="T5" size="45" type="text"></td>
+</tr>
+<tr>
+<td valign="top" width="37%">&nbsp;</td>
+<td colspan="2">
+&nbsp;</td>
+</tr>
+</tbody></table>
+</div><blockquote>
+<p>
+<input value="Create Robots.txt" onclick="create(this.form)" type="button"> <input value="Clear All" type="reset"><div class="clear"/>
+<textarea name="robolist" rows="19" cols="65" wrap=""></textarea>
+</p>
